@@ -1,6 +1,6 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-		loadstring("https://raw.githubusercontent.com/IncognitoExploits/ApplesArereallyCool/main/Key%231",true))()
-		OrionLib:MakeNotification({
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/IncognitoExploits/ApplesArereallyCool/main/Key%231')))()
+OrionLib:MakeNotification({
 			Name = "Key System",
 			Content = "Key System Loaded",
 			Image = "rbxassetid://14264899659",
