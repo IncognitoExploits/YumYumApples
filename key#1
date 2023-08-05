@@ -18,7 +18,7 @@ local Window = OrionLib:MakeWindow({Name = "Key System", HidePremium = false, Sa
  
  
 -- KEY
-local key = game:GetService("ReplicatedStorage").GlobalAnnouncment.Value
+local key = game:GetService("ReplicatedStorage").ServerInfo.ServerLocation.Value
 local keyInput = "No Key Inputted"
  
 local KeyTab = Window:MakeTab({
@@ -45,7 +45,7 @@ KeySection:AddTextbox({
 KeySection:AddButton({
 	Name = "Confirm Key",
 	Callback = function()
-		key = game:GetService("ReplicatedStorage").Minigames.Jackpot.JackpotCap.Value
+		key = game:GetService("ReplicatedStorage").ServerInfo.ServerLocation.Value
  
 		print(key)
 		print(keyInput)
