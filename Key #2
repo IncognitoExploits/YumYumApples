@@ -1,0 +1,74 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/IncognitoExploits/YumYumApples/main/%231')))()
+OrionLib:MakeNotification({
+			Name = "Key System",
+			Content = "Key System Loaded",
+			Image = "rbxassetid://14264899659",
+			Time = 5
+		})
+		local VirtualUser = game:service'VirtualUser'
+ 
+		game:service'Players'.LocalPlayer.Idled:connect(function()
+			VirtualUser:CaptureController()
+			VirtualUser:ClickButton2(Vector2.new())
+		end)
+-- Vars --
+   
+local Window = OrionLib:MakeWindow({Name = "Key System", HidePremium = false, SaveConfig = false, ConfigFolder = "Arcade Haven"})
+ 
+ 
+-- KEY
+local key = game:GetService("ReplicatedStorage").ServerInfo.ServerLocation.Value
+local keyInput = "No Key Inputted"
+ 
+local KeyTab = Window:MakeTab({
+	Name = "Key",
+	Icon = "rbxassetid://14264899659",
+	PremiumOnly = false
+})
+ 
+local KeySection = KeyTab:AddSection({
+	Name = "Key"
+})
+ 
+KeySection:AddTextbox({
+	Name = "Key Input",
+	Default = "Input Key",
+	TextDisappear = false,
+	Callback = function(Value)
+		keyInput = Value
+	end	  
+ 
+})
+ 
+ 
+KeySection:AddButton({
+	Name = "Confirm Key",
+	Callback = function()
+		key = game:GetService("ReplicatedStorage").ServerInfo.ServerLocation.Value
+ 
+		print(key)
+		print(keyInput)
+		if keyInput == key then
+			OrionLib:MakeNotification({
+				Name = "Correcy Key!",
+				Content = "Launching Arcade Haven UI",
+				Image = "rbxassetid://14264899659",
+				Time = 3
+			})
+			loadstring(game:HttpGet(('https://raw.githubusercontent.com/IncognitoExploits/jigolobopbop/main/jigolo%20Main')))()
+ 
+		end
+		if keyInput ~= key then
+			OrionLib:MakeNotification({
+				Name = "Incorrect Key!",
+				Content = "Incorrect Key",
+				Image = "rbxassetid://14264899659",
+				Time = 3
+			})
+		end
+ 
+	end    
+})
+ 
+-- Key End
